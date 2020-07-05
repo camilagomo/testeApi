@@ -12,13 +12,14 @@ OBS: Durante os testes identifiquei que a persistência de dados na criação de
 
 --------------------------------------------------------------------------------------------------------------------
 
+
 # Solucionando exercício:
-Para facilitar a edição dos métodos GET, POST, UPDATE e DELETE defini a variável baseUrl com o end-point https://petstore.swagger.io/v2 com valor inicial {{baseUrl}}. A partir disso, os métodos criados não são necessários de serem atualizados sempre que um novo método for criado, somente a variável {{baseUrl}}/diretório. <br>
+Para facilitar a edição dos métodos GET, POST, UPDATE e DELETE defini a variável baseUrl com o end-point <a href="https://petstore.swagger.io/v2"></a> com valor inicial {{baseUrl}}. A partir disso, os métodos criados não são necessários de serem atualizados sempre que um novo método for criado, somente a variável {{baseUrl}}/diretório. <br>
 
 <br> 1) Crie os usuarios Ana Maia, Rodrigo Mendes, Tatiana Vasconcelos: </br>
 <br> Resp: </br>
-<br> - Criei com o método POST, com endereço: {{baseUrl}}/user/createWithList </br>
-<br> - Preenchi no Body o array com todos os dados de cadastro para cada usuário, exemplo: </br>
+<p> - Criei com o método POST, com endereço: {{baseUrl}}/user/createWithList </p>
+<p> - Preenchi no Body o array com todos os dados de cadastro para cada usuário, exemplo: </p>
 
 <p> {                            
         "username": "amaia", 
