@@ -145,6 +145,7 @@ Resp:
 <p> - Para consulturar o status Delivered / Approved utilizei o método POST {{baseUrl}}/store/order </p> 
 
 <p> - Para consultar petId 154350062005095, que corresponde ao Perry, clico em send e retorna: </p>
+
 ```
 {
     "id": 6512767,
@@ -157,6 +158,7 @@ Resp:
 ```
 
 <p> - Para consultar o petId 154350062005114, que corresponde ao Bichento, clico em send e retorna: </p>
+
 ```
 {
     "id": 6512777,
@@ -168,6 +170,7 @@ Resp:
 }
 ```
 <p> - Para consultar o petId 154350062005116, que corresponde ao Snoopy, clico em send e retorna: </p>
+
 ```
 {
     "id": 6512769,
