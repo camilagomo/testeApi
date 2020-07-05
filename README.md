@@ -86,6 +86,30 @@ pm.variables.set("categoria", categoria[0]);
 }
 ```
 
+</p> O Response Body resulta em: </p> 
+
+```
+{
+    "id": 112808,
+    "category": {
+        "id": 0,
+        "name": "Dog"
+    },
+    "name": "Snoopy",
+    "photoUrls": [
+        "https://www.cobasi.com.br/"
+    ],
+    "tags": [
+        {
+            "id": 0,
+            "name": "Dog"
+        }
+    ],
+    "status": "castrado"
+}
+
+```
+
 <p> - Em "Tests" criei a variável petId que captura o ID do pet que será usado para atualizar o status Approved e Delivered quando consultados na store, dessa forma </p> 
        
 ```       
