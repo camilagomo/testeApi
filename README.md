@@ -51,7 +51,7 @@ Resp:
 2) Crie os pets Snoopy (dog), Bichento (cat) e Perry (platypus)
 Resp:
 
-<p>  Para criar os pets, usei o método POST {{baseUrl}}/pet </p>
+<p> - Para criar os pets, usei o método POST {{baseUrl}}/pet </p>
 
 <p> - Para criar a categoria (dog,cat e platypus) e os nomes de cada animal (Snoopy, Bichento e Perry), adicionei duas variáveis em Pre-request Script. Isto facilita para que eu não preencha manualmente o nome dos animais e suas categorias um a um manualmente. Com isso, resultou em: </p> 
 
