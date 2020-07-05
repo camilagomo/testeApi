@@ -206,7 +206,7 @@ E este é o response body:
 
 ```
 
-<p> - Para cada pet, devo manipular os Ids, dessa forma: </p> 
+<p> - Para gerar cada consulta de cada pet, devo manipular os dados através do meu petId. </p> 
 
 <p> - Para consultar petId 154350062005095, que corresponde ao Perry, clico em send e retorna: </p>
 
