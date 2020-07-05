@@ -93,7 +93,7 @@ let petId = pm.response.json().id;
 pm.environment.set("petId",petId);
 ```
 
-<p>  Para criar cada pet, e gerar um novo id identificador do novo pet, alterei o valor do array de 0 a 2 [0]. </p>
+<p> -  Para criar cada pet, e gerar um novo id identificador do novo pet, alterei o valor do array de 0 a 2 [0]. </p>
 
 <p> 3) Mude o status da ordem de venda do Perry e do Snoopy para "approved" e do Bichento para "delivered" </p> 
 Resp:
