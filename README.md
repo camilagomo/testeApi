@@ -13,7 +13,7 @@ OBS: Durante os testes identifiquei que a persistência de dados na criação de
 --------------------------------------------------------------------------------------------------------------------
 
 # Solucionando exercício:
-Para facilitar a edição dos métodos GET, POST, UPDATE e DELETE defini a variável baseUrl com o end-point https://petstore.swagger.io/v2 como valor inicial {{baseUrl}}. A partir disso, os métodos criados não precisam da url completa, somente da variável {{baseUrl}}/diretório. <br>
+Para facilitar a edição dos métodos GET, POST, UPDATE e DELETE defini a variável baseUrl com o end-point https://petstore.swagger.io/v2 com valor inicial {{baseUrl}}. A partir disso, os métodos criados não são necessários de serem atualizados sempre que um novo método for criado, somente a variável {{baseUrl}}/diretório. <br>
 
 <br> 1) Crie os usuarios Ana Maia, Rodrigo Mendes, Tatiana Vasconcelos: </br>
 <br> Resp: </br>
@@ -21,16 +21,16 @@ Para facilitar a edição dos métodos GET, POST, UPDATE e DELETE defini a vari�
 <br> - Preenchi no Body o array com todos os dados de cadastro para cada usuário, exemplo: </br>
 
 <p> {                            
-<p>         "username": "amaia", 
-<p>         "firstName": "Ana",  
-<p>         "lastName": "Maia",  
-<p>         "email": "amaia@gmail.com", 
-<p>         "password": "teste@123", 
-<p>         "phone": "11988888888",
-<p>         "userStatus": "0"
-<p> },</p>
+        "username": "amaia", 
+         "firstName": "Ana",  
+         "lastName": "Maia",  
+         "email": "amaia@gmail.com", 
+         "password": "teste@123", 
+         "phone": "11988888888",
+         "userStatus": "0"
+ },</p>
 
-- Para listar usuário cadastrado, usei o método GET no username, dessa forma: {{baseUrl}}/user/amaia, resultando na resposta: 
+- Para listar usuário cadastrado, usei o método GET no username de cada usuário, dessa forma: {{baseUrl}}/user/amaia, resultando na resposta: 
 
 {
     "id": 12,
