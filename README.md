@@ -1,5 +1,5 @@
 # Teste de API
-Testando API com Postman e documentação swagger.  
+Testando API com Postman e documentação padrão swagger.  
 
 Exercício 1 - Teste de API
 Utilize a Swagger Petstore (https://petstore.swagger.io/):
@@ -11,7 +11,6 @@ Utilize a Swagger Petstore (https://petstore.swagger.io/):
 OBS: Durante os testes identifiquei que a persistência de dados na criação de um novo Pet, falha após alguns segundos. Não persiste os dados por muito tempo. Portanto salvei algumas destas consultas para exemplificar a resolução do exercício. 
 
 --------------------------------------------------------------------------------------------------------------------
-
 
 # Solucionando exercício:
 <br> Para facilitar a edição dos métodos GET, POST, UPDATE e DELETE defini a variável baseUrl com o end-point "https://petstore.swagger.io/v2" com valor inicial {{baseUrl}}. A partir disso, os novos métodos criados não são necessários de serem atualizados com a url completa, apenas passamos a variável {{baseUrl}}/diretório. </br>
