@@ -8,7 +8,7 @@ Utilize a Swagger Petstore (https://petstore.swagger.io/):
 3) Mude o status da ordem de venda do Perry e do Snoopy para "approved" e do Bichento para "delivered"
 4) Consulte as 3 ordens geradas
 
-OBS: Durante os testes identifiquei que a persistência de dados na criação de um novo Pet, falha após alguns segundos. Não persiste os dados por muito tempo. Portanto salvei algumas destas consultas para exemplificar a resolução do exercício. 
+OBS: Durante os testes identifiquei que a persistência de dados na criação de um novo Pet, falha após alguns segundos. Não persiste os dados por muito tempo. Portanto salvei algumas das consultas para exemplificar a resolução do exercício, antes que estas não pudessem mais ser validadas. 
 
 --------------------------------------------------------------------------------------------------------------------
 
