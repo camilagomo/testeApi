@@ -192,7 +192,7 @@ E este é o response body:
     "complete": true
 }
 ```
-<p> - Com Id 8919 gerado, realizado a consulta através do método GET {{baseUrl}}/store/order/:orderId e verifico a minha ordem gerada que por ser uma consulta deve resultar no mesmo valor acima do response body: 
+<p> - Para consultar a venda 8919 geradas, utilizo o método GET {{baseUrl}}/store/order/:orderId e verifico a minha ordem. A resposta deve ser com os mesmos dados listados acima, carregados no response body.
          
 ```         
 {
