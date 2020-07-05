@@ -20,15 +20,15 @@ Para facilitar a edição dos métodos GET, POST, UPDATE e DELETE defini a vari�
 <br> - Criei com o método POST, com endereço: {{baseUrl}}/user/createWithList </br>
 <br> - Preenchi no Body o array com todos os dados de cadastro para cada usuário, exemplo: </br>
 
-<br> {
-        "username": "amaia",
-        "firstName": "Ana",
-        "lastName": "Maia",
-        "email": "amaia@gmail.com",
-        "password": "teste@123",
-        "phone": "11988888888",
-        "userStatus": "0"
-    },</br>
+<p> {                            </p>
+<p>         "username": "amaia", </p>
+<p>         "firstName": "Ana",  </p>
+<p>         "lastName": "Maia",  </p>
+<p>         "email": "amaia@gmail.com", </p>
+<p>         "password": "teste@123", </p>
+<p>         "phone": "11988888888",</p> 
+<p>         "userStatus": "0"</p>
+<p> },</p>
 
 - Para listar usuário cadastrado, usei o método GET no username, dessa forma: {{baseUrl}}/user/amaia, resultando na resposta: 
 
