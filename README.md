@@ -14,17 +14,16 @@ OBS: Durante os testes identifiquei que a persistência de dados na criação de
 
 
 # Solucionando exercício:
-Para facilitar a edição dos métodos GET, POST, UPDATE e DELETE defini a variável baseUrl com o end-point "https://petstore.swagger.io/v2" com valor inicial {{baseUrl}}. A partir disso, os métodos criados não são necessários de serem atualizados sempre que um novo método for criado, somente a variável {{baseUrl}}/diretório. <br>
+<br> Para facilitar a edição dos métodos GET, POST, UPDATE e DELETE defini a variável baseUrl com o end-point "https://petstore.swagger.io/v2" com valor inicial {{baseUrl}}. A partir disso, os novos métodos criados não são necessários de serem atualizados com a url completa, apenas passamos a variável {{baseUrl}}/diretório. </br>
 
 <br> 1) Crie os usuarios Ana Maia, Rodrigo Mendes, Tatiana Vasconcelos: </br>
-<br> Resp: </br>
-<p> - Criei com o método POST, com endereço: {{baseUrl}}/user/createWithList </p>
-<p> - Preenchi no Body o array com todos os dados de cadastro para cada usuário, exemplo: </p>
-
+Resp: 
+<p> - Criei com o método POST {{baseUrl}}/user/createWithList </p>
+<p> - Criei um array no Body com os dados para novo usuário, exemplo: </p>
 
 ```
 {                            
-        "username": "amaia", 
+         "username": "amaia", 
          "firstName": "Ana",  
          "lastName": "Maia",  
          "email": "amaia@gmail.com", 
@@ -34,8 +33,9 @@ Para facilitar a edição dos métodos GET, POST, UPDATE e DELETE defini a vari�
  }, 
 ```
 
-- Para listar usuário cadastrado, usei o método GET no username de cada usuário, dessa forma: {{baseUrl}}/user/amaia, resultando na resposta: 
+- Para listar usuário cadastrado, usei o método GET com username de cada usuário já criado, dessa forma: {{baseUrl}}/user/amaia, resultando na resposta: 
 
+```
 {
     "id": 12,
     "username": "amaia",
@@ -46,21 +46,26 @@ Para facilitar a edição dos métodos GET, POST, UPDATE e DELETE defini a vari�
     "phone": "11988888888",
     "userStatus": 0
 }
+```
 
 2) Crie os pets Snoopy (dog), Bichento (cat) e Perry (platypus)
 Resp:
 
-- Para criar os pets, usei o método POST em {{baseUrl}}/pet
+<p>  Para criar os pets, usei o método POST {{baseUrl}}/pet </p>
 
-- Para criar a categoria (dog,cat e platypus) e os nomes de cada animal (Snoopy, Bichento e Perry), adicionei duas variáveis em Pre-request Script. Isto facilita para que eu não preencha manualmente o nome dos animais e suas categorias um a um. Com isso, resultou em:
+<p> - Para criar a categoria (dog,cat e platypus) e os nomes de cada animal (Snoopy, Bichento e Perry), adicionei duas variáveis em Pre-request Script. Isto facilita para que eu não preencha manualmente o nome dos animais e suas categorias um a um manualmente. Com isso, resultou em: </p> 
 
+```
 let name = ["Snoopy", "Bichento","Perry"];
 let categoria = ["Dog","Cat","Platypus"];
 
 pm.variables.set("name",name[0]);
 pm.variables.set("categoria", categoria[0]);
+```
 
-- No Body chamei as duas variáveis criadas, que resultou em: 
+<p>  No Body chamei as duas variáveis name e categoria, que resultou em: </p> 
+
+```
 {
     "name": "{{name}}",
     "photoUrls": [
@@ -79,26 +84,30 @@ pm.variables.set("categoria", categoria[0]);
     ],
     "status": "castrado"
 }
+```
 
-- Em Tests criei a variável petId que captura o ID do pet que será usado para atualizar o status Approved e Delivered no próximo passo:
-Exemplo: 
+<p> - Em "Tests" criei a variável petId que captura o ID do pet que será usado para atualizar o status Approved e Delivered quando consultados na store, dessa forma </p> 
+       
+```       
 let petId = pm.response.json().id;
 pm.environment.set("petId",petId);
+```
 
-- Para criar cada pet, alterei o valor do array de 0 a 2 [0].
+<p>  Para criar cada pet, e gerar um novo id identificador do novo pet, alterei o valor do array de 0 a 2 [0]. </p>
 
-3) Mude o status da ordem de venda do Perry e do Snoopy para "approved" e do Bichento para "delivered"
+<p> 3) Mude o status da ordem de venda do Perry e do Snoopy para "approved" e do Bichento para "delivered" </p> 
 Resp:
 
-- Criei o método POST em {{baseUrl}}/store/order
-- Com ID gerado ao adicionar um novo pet a store, uso este ID para consulta através do método GET em {{baseUrl}}/store/order/:orderId o status Delivered e Approved são enviados:
+<p> - Criei o método POST {{baseUrl}}/store/order </p>
+<p> - O método GET {{baseUrl}}/store/order/:orderId retorna se o status Delivered e Approved são enviados corretamente, usando id de cada pet, gerado anteriormente ao criar o pet: </p>
 
-Estes Ids foram gerados no momento em que consultei os pets através dos Ids gerados inicialmente, na criação do pet. Salvei estes para consultar futuramente as ordens de vendas. 
+<p> Salvei estes ids na minha primeira consulta aos pets criados:  </p>
 
 Perry => 154350062005095
 Bichento => 154350062005114
 Snoopy => 154350062005116
 
+```
 Perry:
 {
     "id": 6512767,
@@ -128,16 +137,15 @@ Snoopy:
     "status": "approved",
     "complete": true
 }
+```
 
+<p> 4) Consulte as 3 ordens geradas </p> 
+Resp: 
 
-4) Consulte as 3 ordens geradas
-<p> Resp: </p> 
+<p> - Para consulturar o status Delivered / Approved utilizei ids dos pets da seguinte forma: </p> 
 
-- Para consulturar o status Delivered / Approved utilizei ids dos pets da seguinte forma: 
-
-<p> Através do petId 154350062005095, consultei: </p>
-
-Perry
+<p> Quero consultar o petId 154350062005095, que corresponde ao Perry, então consultei e retornou: </p>
+```
 {
     "id": 6512767,
     "petId": 154350062005095,
@@ -146,9 +154,10 @@ Perry
     "status": "approved",
     "complete": true
 }
+```
 
-Através do petId 154350062005114, consultei: 
-Bichento 
+<p> Quero consultar o petId 154350062005114, que corresponde ao Bichento, então consultei e retornou: </p>
+```
 {
     "id": 6512777,
     "petId": 154350062005114,
@@ -157,9 +166,9 @@ Bichento
     "status": "Delivered",
     "complete": true
 }
-
-Através do petId 154350062005116, consultei:
-Snoopy
+```
+<p> Quero consultar o petId 154350062005116, que corresponde ao Snoopy, então consultei e retornou: </p>
+```
 {
     "id": 6512769,
     "petId": 154350062005116,
@@ -168,3 +177,4 @@ Snoopy
     "status": "approved",
     "complete": true
 }
+```
