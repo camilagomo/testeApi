@@ -13,13 +13,14 @@ OBS: Durante os testes identifiquei que a persistência de dados na criação de
 --------------------------------------------------------------------------------------------------------------------
 
 # Solucionando exercício:
-Para facilitar a edição dos métodos GET, POST, UPDATE e DELETE defini a variável baseUrl com o end-point https://petstore.swagger.io/v2 como valor inicial {{baseUrl}}. A partir disso, os métodos criados não precisam da url completa, somente da variável {{baseUrl}}/diretório. 
+Para facilitar a edição dos métodos GET, POST, UPDATE e DELETE defini a variável baseUrl com o end-point https://petstore.swagger.io/v2 como valor inicial {{baseUrl}}. A partir disso, os métodos criados não precisam da url completa, somente da variável {{baseUrl}}/diretório. <br>
 
-1) Crie os usuarios Ana Maia, Rodrigo Mendes, Tatiana Vasconcelos: 
-Resp:
-Criei com o método POST, com endereço: {{baseUrl}}/user/createWithList
-No body preenchi o array com todos os dados de cadastro para cada usuário, exemplo: 
-    {
+<br> 1) Crie os usuarios Ana Maia, Rodrigo Mendes, Tatiana Vasconcelos: </br>
+<br> Resp: </br>
+<br> - Criei com o método POST, com endereço: {{baseUrl}}/user/createWithList </br>
+<br> - Preenchi no Body o array com todos os dados de cadastro para cada usuário, exemplo: </br>
+
+<br> {
         "username": "amaia",
         "firstName": "Ana",
         "lastName": "Maia",
@@ -27,7 +28,7 @@ No body preenchi o array com todos os dados de cadastro para cada usuário, exem
         "password": "teste@123",
         "phone": "11988888888",
         "userStatus": "0"
-    },
+    },</br>
 
 - Para listar usuário cadastrado, usei o método GET no username, dessa forma: {{baseUrl}}/user/amaia, resultando na resposta: 
 
