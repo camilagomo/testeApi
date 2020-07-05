@@ -142,9 +142,9 @@ Snoopy:
 <p> 4) Consulte as 3 ordens geradas </p> 
 Resp: 
 
-<p> - Para consulturar o status Delivered / Approved utilizei ids dos pets da seguinte forma: </p> 
+<p> - Para consulturar o status Delivered / Approved utilizei o método POST {{baseUrl}}/store/order </p> 
 
-<p> Quero consultar o petId 154350062005095, que corresponde ao Perry, então consultei e retornou: </p>
+<p> - Para consultar petId 154350062005095, que corresponde ao Perry, clico em send e retorna: </p>
 ```
 {
     "id": 6512767,
@@ -156,7 +156,7 @@ Resp:
 }
 ```
 
-<p> Quero consultar o petId 154350062005114, que corresponde ao Bichento, então consultei e retornou: </p>
+<p> - Para consultar o petId 154350062005114, que corresponde ao Bichento, clico em send e retorna: </p>
 ```
 {
     "id": 6512777,
@@ -167,7 +167,7 @@ Resp:
     "complete": true
 }
 ```
-<p> Quero consultar o petId 154350062005116, que corresponde ao Snoopy, então consultei e retornou: </p>
+<p> - Para consultar o petId 154350062005116, que corresponde ao Snoopy, clico em send e retorna: </p>
 ```
 {
     "id": 6512769,
