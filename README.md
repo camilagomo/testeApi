@@ -130,6 +130,8 @@ Resp:
 <p> Bichento => 154350062005114 </p>
 <p> Snoopy => 154350062005116 </p>
 
+<p> - O Response body resulta em: </p> 
+
 ```
 Perry:
 {
