@@ -167,7 +167,46 @@ Snoopy:
 <p> 4) Consulte as 3 ordens geradas </p> 
 Resp: 
 
-<p> - Para consulturar o status Delivered / Approved utilizei o método POST {{baseUrl}}/store/order </p> 
+<p> - Para consulturar o status Delivered / Approved utilizei o método POST {{baseUrl}}/store/orderId </p> 
+
+- Esta é uma ordem que manipulei com status Approved, portanto: 
+
+```
+{
+    "petId": "154350062005095",
+    "quantity": "1",
+    "shipDate": "2020-07-04T23:13:55.005Z",
+    "status": "Approved",
+    "complete": "true"
+}
+```
+E este é o response body: 
+
+```
+{
+    "id": 8919,
+    "petId": 154350062005095,
+    "quantity": 1,
+    "shipDate": "2020-07-04T23:13:55.005+0000",
+    "status": "Approved",
+    "complete": true
+}
+```
+<p> - Com Id 8919 gerado, realizado a consulta através do método GET {{baseUrl}}/store/order/:orderId e verifico a minha ordem gerada que por ser uma consulta deve resultar no mesmo valor acima do response body: 
+         
+```         
+{
+    "id": 8919,
+    "petId": 154350062005095,
+    "quantity": 1,
+    "shipDate": "2020-07-04T23:13:55.005+0000",
+    "status": "Approved",
+    "complete": true
+}
+
+```
+
+<p> - Para cada pet, devo manipular os Ids, dessa forma: </p> 
 
 <p> - Para consultar petId 154350062005095, que corresponde ao Perry, clico em send e retorna: </p>
 
