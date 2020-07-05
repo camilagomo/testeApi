@@ -103,9 +103,9 @@ Resp:
 
 <p> Salvei estes ids na minha primeira consulta aos pets criados:  </p>
 
-Perry => 154350062005095
-Bichento => 154350062005114
-Snoopy => 154350062005116
+<p> Perry => 154350062005095 </p>
+<p> Bichento => 154350062005114 </p>
+<p> Snoopy => 154350062005116 </p>
 
 ```
 Perry:
