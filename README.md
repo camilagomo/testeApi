@@ -14,7 +14,7 @@ OBS: Durante os testes identifiquei que a persistência de dados na criação de
 
 
 # Solucionando exercício:
-Para facilitar a edição dos métodos GET, POST, UPDATE e DELETE defini a variável baseUrl com o end-point <a href="https://petstore.swagger.io/v2"></a> com valor inicial {{baseUrl}}. A partir disso, os métodos criados não são necessários de serem atualizados sempre que um novo método for criado, somente a variável {{baseUrl}}/diretório. <br>
+Para facilitar a edição dos métodos GET, POST, UPDATE e DELETE defini a variável baseUrl com o end-point "https://petstore.swagger.io/v2" com valor inicial {{baseUrl}}. A partir disso, os métodos criados não são necessários de serem atualizados sempre que um novo método for criado, somente a variável {{baseUrl}}/diretório. <br>
 
 <br> 1) Crie os usuarios Ana Maia, Rodrigo Mendes, Tatiana Vasconcelos: </br>
 <br> Resp: </br>
@@ -128,11 +128,11 @@ Snoopy:
 
 
 4) Consulte as 3 ordens geradas
-Resp:
+<p> Resp: </p> 
 
-Para consulturar o status Delivered / Approved
+- Para consulturar o status Delivered / Approved utilizei ids dos pets da seguinte forma: 
 
-Através do petId 154350062005095, consultei: 
+<p> Através do petId 154350062005095, consultei: </p>
 
 Perry
 {
